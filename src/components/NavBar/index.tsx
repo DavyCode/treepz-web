@@ -108,7 +108,7 @@ const handleSubMenuItemClick = () => {
      };
   return (
     <div
-      className={`w-full sm:container h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 bg-white fixed top-0 z-50 ${
+      className={`w-full sm:max-w-[1691px] h-16 sm:h-[72px] mx-auto flex justify-between items-center py-[20px] px-4 sm:px-20 bg-white fixed top-0 z-50 ${
         ["/wedding-transportation"].includes(pathname) && "bg-[#FDF3D8]"
       }`}
     >

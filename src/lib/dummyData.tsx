@@ -17,6 +17,10 @@ import ReliabilityGuarantee from "@/assets/svgs/reliablity-guarantee.svg";
 import Vehicles4AllOccassions from "@/assets/svgs/vehicles-for-all-occasions.svg";
 import TravelSupport247 from "@/assets/svgs/24-7-travel-support.svg";
 import CleanAndComfortableIcon from "@/assets/svgs/clean-and-comfortable.svg";
+import DALogo from "@/assets/svgs/news/da-logo.svg";
+import TechCabalLogo from "@/assets/svgs/news/TechCabal.svg";
+import TechMoranLogo from "@/assets/svgs/news/tech-moran.svg";
+import TechCrLogo from "@/assets/svgs/news/TechCr.svg";
 
 interface PostalCardProps {
   src: string;
@@ -85,6 +89,66 @@ interface OurPartnerProps {
   src: string;
 }
 [];
+
+interface NewsProps {
+  logo?: JSX.Element;
+  src?: string;
+  title: string;
+  date: string;
+  href: string
+  desc?: string
+}[]
+
+export const BlogsData: NewsProps[] = [
+  {
+    src: "/blogs/blog-1.png",
+    title: "So What Have We Been Up To At Treepz In 2023?",
+    date: "Jan 14, 2023",
+    desc: "At Treepz, we’re thrilled to reflect on the remarkable achievements and growth we experienced throughout 2023.",
+    href: "https://blog.treepz.com/so-what-have-we-been-up-to-at-treepz-in-2023/",
+  },
+  {
+    src: "/blogs/blog-2.png",
+    title: "So What Have We Been Up To At Treepz In 2023?",
+    date: "Jan 14, 2023",
+    desc: "At Treepz, we’re thrilled to reflect on the remarkable achievements and growth we experienced throughout 2023.",
+    href: "https://blog.treepz.com/so-what-have-we-been-up-to-at-treepz-in-2023/",
+  },
+  {
+    src: "/blogs/blog-3.png",
+    title: "So What Have We Been Up To At Treepz In 2023?",
+    date: "Jan 14, 2023",
+    desc: "At Treepz, we’re thrilled to reflect on the remarkable achievements and growth we experienced throughout 2023.",
+    href: "https://blog.treepz.com/so-what-have-we-been-up-to-at-treepz-in-2023/",
+  },
+];
+
+export const NewsData: NewsProps[] = [
+  {
+    logo: <DALogo />,
+    title: "Treepz partner Octamile to launch insurance for travellers, hosts",
+    date: "Oct 17, 2023",
+    href: "https://techcabal.com/2023/02/14/treepz-expands-into-kenya/"
+  },
+  {
+    logo: <TechCabalLogo />,
+    title: "Online vehicle rentals company, Treepz expands into Kenya",
+    date: "Feb 14, 2023",
+    href: "https://disrupt-africa.com/2023/10/17/nigerias-treepz-octamile-partner-to-launch-insurance-program-for-travellers-hosts/"
+  },
+  {
+    logo: <TechMoranLogo />,
+    title: "Online vehicle rentals company, Treepz expands into Kenya",
+    date: "Feb 14, 2023",
+    href: "https://techmoran.com/2023/08/24/treepz-selected-for-2023-vc4a-venture-showcase-appoints-new-board-members-to-foster-sustainable-growth/"
+  },
+  {
+    logo: <TechCrLogo />,
+    title: "Nigerian MaaS startup Treepz closes $2.8M seed round to fund",
+    date: "Jan 17, 2024",
+    href: "https://techcrunch.com/2021/11/22/nigerian-maas-startup-treepz-closes-2-8m-seed-round-to-fund-east-african-expansion/"
+  }
+]
 
 export const MiniPartnerData: OurPartnerProps[] = [
   {

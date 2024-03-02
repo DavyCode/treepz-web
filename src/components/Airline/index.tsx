@@ -42,7 +42,7 @@ const AirlineComponent = () => {
           </p>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[297px] mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
+            className="cursor-pointer rounded-full w-full sm:w-[330px] mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2 mb-11 sm:mb-0"
             //onClick={() => {}}
           >
             Learn more about Treepz’s Airline Services
