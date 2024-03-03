@@ -204,51 +204,51 @@ export const PostalCardData:PostalCardProps[] = [
 ]
 export const BusinessSolutionsData:PostalCardProps[] = [
     {
-        src:"postal-1.png",
+        src:"airline.png",
         title:"Airline",
         href: "airline"
     },
     {
-        src:"car-rental.png",
+        src:"religious.png",
         title:"Religious groups",
     },
     {
-        src:"school-transportation.png",
+        src:"corporate.png",
         title:"Corporate events",
         href: "school-transportation"
     },
     {
-        src:"school-transportation.png",
+        src:"school.png",
         title:"School trips",
         href: "school-transportation"
     },
     {
-        src:"event-transportation.png",
+        src:"private.png",
         title:"Private events",
     },
     {
-        src:"airport-transportation.png",
+        src:"university.png",
         title:"University",
         href: "university"
     },
     {
-        src:"airport-transportation.png",
+        src:"sporting.png",
         title:"Sporting teams",
     },
     {
-        src:"airport-transportation.png",
+        src:"military.png",
         title:"Military",
     },
     {
-        src:"airport-transportation.png",
+        src:"production.png",
         title:"Production crews",
     },
     {
-        src:"airport-transportation.png",
+        src:"weddings.png",
         title:"Weddings",
     },
     {
-        src:"airport-transportation.png",
+        src:"government.png",
         title:"Government",
     },
 ]

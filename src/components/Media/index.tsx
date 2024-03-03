@@ -25,12 +25,12 @@ const embedUrl = getYoutubeEmbedUrl(src);
           className="w-full cursor-pointer h-[400px] absolute"
           onClick={handleClick}
         >
-          <Image 
-            src="/media-1.png" 
-            alt="YouTube Thumbnail" 
+          <Image
+            src="/media-thumbnail.png"
+            alt="YouTube Thumbnail"
             fill
             sizes="100vw, 100vh"
-            className="w-full h-full object-cover absolute" 
+            className="w-full h-full object-cover absolute"
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <PlayYouTubeIcon />
