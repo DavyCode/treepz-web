@@ -12,7 +12,6 @@ const Footer = () => {
   const router = useRouter()
   const pathname = usePathname()
 
-  console.log(pathname)
   return (
     <div className={clsx({
       "w-full pt-[88px] mt-10": true,

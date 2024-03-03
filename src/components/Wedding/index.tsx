@@ -7,9 +7,11 @@ import Testimony from '../common/testimony';
 import WeddingPostal from './card';
 import { WeddingPostalData } from '@/lib/dummyData'
 import { useModal } from "@/contexts/ModalContext";
+import { useRouter } from 'next/navigation';
 
 const WeddingComponent = () => {
        const { showModal } = useModal();
+       const router = useRouter()
 
     return (
         <>

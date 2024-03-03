@@ -13,13 +13,13 @@ const MediaComponent  = () => {
           <div className="flex sm:gap-24 w-full flex-col sm:flex-row">
             <div className="w-full sm:max-w-[1272px] relative overflow-hidden rounded-2xl">
               <VideoComponent src="AdK2ds2NAu4?si=AKChd8d5P1Mb8-Js" />
-              {/* <div className="absolute bottom-8 ml-9 text-white flex flex-col space-y-2">
+              <div className="absolute bottom-8 ml-9 text-white flex flex-col space-y-2">
                 <h1>Moving in the heart of Africa</h1>
                 <div className="flex gap-4 items-center justify-between w-fit">
                   <p>Watch the video</p>
                   <ChevronRightWhiteIcon />
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
           <div className="mt-24 sm:mt-[128px] w-full flex flex-col text-white">
