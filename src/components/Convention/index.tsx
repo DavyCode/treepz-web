@@ -13,10 +13,13 @@ import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
 
 const NeededInformations = ["How Treepz Will Take Your Worries Away", "Treepz has the know-how", "Our conference shuttle services", "Tailor-made solutions", "Time and cost savings","Safety", "Choose your own vehicle","Carbon neutral","Options for convention shuttles","How much does it cost for convention transportation near me?", "Book EASY Convention Transporation"];
 
 const ConventionComponent = () => {
+  const { showModal } = use
   return (
     <div>
       <div className="bg-[url(/Hero-convention.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
@@ -72,63 +75,12 @@ const ConventionComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Dive Deeper into Treepz&lsquo;s Event Transportation Services
-            </h1>
-            <p className="text-lg sm:text-xl">
-              Our services are trusted by many. Experience the unique Treepz
-              touch that elevates us in the industry.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <GetAQuote />
+      <UserRoutesComponent
+       title="Dive Deeper into Treepz&lsquo;s Event Transportation Services"
+       desc="Our services are trusted by many. Experience the unique Treepz
+              touch that elevates us in the industry."
+       />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <MiniStickyBarMenu data={NeededInformations} />
 
@@ -168,6 +120,7 @@ const ConventionComponent = () => {
               src="/detail-img.png"
               alt="detail"
               fill
+              sizes="100vw, 1000vh"
               priority
               className="object-contain absolute"
             />
@@ -184,7 +137,7 @@ const ConventionComponent = () => {
                 the event is taking place – a bunch of amazing drivers who can
                 handle multi-day logistics and all different trip types.
               </p>
-              ‍
+            
               <p>
                 Not only that, but we also deploy onsite coordinators on the
                 ground who will be an extension of your team. Our experienced
@@ -243,7 +196,7 @@ const ConventionComponent = () => {
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[260px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+            className="cursor-pointer rounded-full w-full sm:w-[260px] font-medium mt-8 sm:mt-6 text-black flex gap-2"
             //onClick={() => {}}
           >
             Get the there with Treepz
@@ -279,7 +232,7 @@ const ConventionComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-full sm:w-[216px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
-            //onClick={() => {}}
+            onClick={showModal}
           >
             Get a custom quote
             <ChevronRightIcon />

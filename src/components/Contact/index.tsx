@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import CountryCodeInput from "@/components/ui/country-code-input";
 import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
@@ -35,7 +36,6 @@ const formSchema = z.object({
   email: z.string().email(),
   company_name: z.string().min(2).max(50),
   last_name: z.string().min(2).max(50),
-  country_code: z.string(),
   phone_number: z.string()
 
 })
@@ -54,7 +54,6 @@ const ContactComponent = () => {
       email: "",
       company_name: "",
       last_name: "",
-      country_code: "",
       phone_number: ""
 
     },
@@ -65,7 +64,7 @@ const ContactComponent = () => {
   }
 
   return (
-    <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-16 mt-10 sm:mt-[114px]">
+    <div className="bg-gradient-to-t to-[#FDF2D052] from-[#FDF2D000] container px-4 sm:px-20 flex flex-col sm:flex-row gap-16 pt-10 sm:pt-[114px]">
       <div className="w-full sm:w-[585px] hidden sm:inline-block">
         <h1 className="text-[#212529] text-[32px] sm:text-[56px] leading-[40px] sm:leading-[64px] font-bold uppercase">
           Stress-free travel, wherever you go. Book your ride with Treepz and
@@ -126,7 +125,7 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
-      <div className="w-full sm:w-[600px] p-8 border rounded-2xl shadow">
+      <div className="w-full sm:w-[600px] p-8 border rounded-2xl genShadow bg-white">
         <p className="text-[22px] font-semibold text-[#101010]">
           Transportation Request
         </p>
@@ -300,23 +299,20 @@ const ContactComponent = () => {
                 )}
               />
             </div>
-            <div className="w-full flex flex-col gap-2 sm:flex-row space-y-3 sm:space-y-0 justify-between sm:items-end">
               <FormField
                 control={form.control}
-                name="country_code"
+                name="phone_number"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>
-                      Country Code <span className="ml-2 text-red-500">*</span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input placeholder="code" {...field} />
+                    <FormLabel>Phone number</FormLabel>
+                    <FormControl className="w-full">
+                      <CountryCodeInput name="phone_number" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <FormField
+              {/* <FormField
                 control={form.control}
                 name="phone_number"
                 render={({ field }) => (
@@ -328,14 +324,13 @@ const ContactComponent = () => {
                     <FormMessage />
                   </FormItem>
                 )}
-              />
-            </div>
+              /> */}
             <p className="my-4 sm:!mt-6 sm:!mb-8">
               Treepz needs the contact information you provide to us to contact
               you about our products and services. You may unsubscribe from
               these communications at anytime.
             </p>
-            <Button type="submit" className="w-full !mb-8 text-gray-900">
+           <Button type="submit" className="w-full !mb-8 text-gray-900">
               Submit
             </Button>
           </form>

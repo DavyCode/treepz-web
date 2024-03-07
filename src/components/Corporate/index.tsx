@@ -12,6 +12,7 @@ import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
+import GetAQuote from '@/components/common/get-a-quote'
 
 const NeededInformations = ["Corporate Shuttle Service", "Which Swoop corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Swoop vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Swoop corporate shuttle service near me?"];
 
@@ -71,62 +72,13 @@ const CorporateComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">About Swoop</h1>
-            <p className="text-lg sm:text-xl">
-              Choose from hundreds of vehicles, dozens of styles, and seemingly
+      <GetAQuote />
+      <UserRoutesComponent
+        title="About Swoop"
+        desc="Choose from hundreds of vehicles, dozens of styles, and seemingly
               endless choices when it comes to amenities. Travel around in
-              top-of-the-line style!
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+              top-of-the-line style!"
+      />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <MiniStickyBarMenu data={NeededInformations} />
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0">

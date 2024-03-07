@@ -11,6 +11,9 @@ import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
 import Link from 'next/link'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
+import { useModal } from "@/contexts/ModalContext";
 
 const NeededInformations = [
   "Why Use a Corporate Travel Service?",
@@ -20,6 +23,9 @@ const NeededInformations = [
 ];
 
 const AirportTransComponent = () => {
+  const router = useRouter();
+  const { showModal } = useModal();
+
   return (
     <>
       <div className="bg-[url(/airport-hero.png)] bg-no-repeat bg-cover w-full text-white flex flex-col justify-center items-center py-[62px] sm:py-[176px] mt-5 sm:mt-20">
@@ -36,7 +42,7 @@ const AirportTransComponent = () => {
         </div>
         <Button
           variant={"default"}
-          className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-semibold gap-2 mt-14"
+          className="cursor-pointer rounded-full text-gray-900 w-fit flex items-center font-medium gap-2 mt-14"
           //onClick={() => {}}
         >
           Learn more
@@ -80,70 +86,19 @@ const AirportTransComponent = () => {
         <Image
           src="/blue-blur-rect.png"
           fill
+          sizes="100vw, 100vh"
           priority
           className="absolute object-fill"
           alt="rect"
         />
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Swoop for Business
-            </h1>
-            <p className="text-lg sm:text-xl w-[630px]">
-              Vehicles provided by specialized travel management companies or
+      <GetAQuote />
+      <UserRoutesComponent 
+        title="Swoop for Business" 
+        desc="Vehicles provided by specialized travel management companies or
               TMCs like Swoop (hey there) will help your business effectively
               manage your travel-related activities – from events and
-              conferences to those stressful daily commutes.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[404px] sm:h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus route"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+              conferences to those stressful daily commutes."  />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
@@ -189,6 +144,7 @@ const AirportTransComponent = () => {
               src="/airport-1.png"
               alt="employee"
               fill
+              sizes="100vw, 100vh"
               priority
               className="object-cover absolute"
             />
@@ -234,7 +190,7 @@ const AirportTransComponent = () => {
             <Button
               variant={"default"}
               className="cursor-pointer rounded-full font-medium text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
-              //onClick={() => {}}
+              onClick={showModal}
             >
               Get a quote
               <ChevronRightIcon />
@@ -244,6 +200,7 @@ const AirportTransComponent = () => {
                 src="/executive-bg.png"
                 alt="employee"
                 fill
+                sizes="100vw, 100vh"
                 priority
                 className="object-cover absolute"
               />

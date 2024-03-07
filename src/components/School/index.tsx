@@ -11,6 +11,8 @@ import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
 import Link from 'next/link'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
 
 const NeededInformations = [
   "Treepz’s School Transport Services",
@@ -80,68 +82,18 @@ const SchoolTransComponent = () => {
         <Image
           src="/blue-blur-rect.png"
           fill
+          sizes="100vw, 100vh"
           priority
           className="absolute object-fill"
           alt="rect"
         />
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Dive Deeper into Treepz&lsquo;s Event Transportation Services
-            </h1>
-            <p className="text-lg sm:text-xl">
-              So, now it’s time to take advantage of Swoop’s luxury executive
-              ground transportation for a stylish and professional transfer.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[404px] sm:h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus route"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <GetAQuote />
+      <UserRoutesComponent 
+        title="Dive Deeper into Treepz&lsquo;s Event Transportation Services"
+        desc="So, now it’s time to take advantage of Swoop’s luxury executive
+              ground transportation for a stylish and professional transfer."
+      />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
@@ -149,7 +101,7 @@ const SchoolTransComponent = () => {
           </h1>
           {NeededInformations.map((info, index) => (
             <Link
-              href={`#info${index+1}`}
+              href={`#info-${index+1}`}
               className="flex border-b cursor-pointer text-gray-900 justify-between items-center p-4"
               key={index}
             >
@@ -184,7 +136,7 @@ const SchoolTransComponent = () => {
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+            className="cursor-pointer rounded-full font-medium flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
             //onClick={() => {}}
           >
             Get a quote
@@ -195,6 +147,7 @@ const SchoolTransComponent = () => {
               src="/school-1.png"
               alt="school"
               fill
+              sizes="100vw, 100vh"
               priority
               className="object-cover absolute"
             />

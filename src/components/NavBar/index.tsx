@@ -113,7 +113,7 @@ const handleSubMenuItemClick = () => {
       }`}
     >
       <div className="flex sm:w-[702px] justify-between items-center">
-        <span className="cursor-pointer" onClick={() => router.push("/")}>
+        <span className="cursor-pointer mr-10" onClick={() => router.push("/")}>
           <Company_Logo />
         </span>
         <NavigationMenu className="hidden sm:inline-block">

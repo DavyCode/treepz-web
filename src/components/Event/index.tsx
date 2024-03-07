@@ -10,6 +10,8 @@ import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRight from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
 
 
 import {
@@ -80,65 +82,13 @@ const EventComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[30px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="sm:h-[64px] sm:w-[144px] font-semibold"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="font-bold mb-2 sm:mb-6">
-              Dive Deeper into Treepz&lsquo;s Event Transportation Services
-            </h1>
-            <p className="text-xl">
-              Our services are trusted by many. Experience the unique Treepz
-              touch that elevates us in the industry.
-            </p>
-
-            <div className="w-full sm:w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                sizes='100vw'
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              sizes='100vw'
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <GetAQuote />
+      <UserRoutesComponent
+       title="Dive Deeper into Treepz&lsquo;s Event Transportation Services"
+       desc="Our services are trusted by many. Experience the unique Treepz
+              touch that elevates us in the industry."
+        />
+    
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20">
         <div className="flex flex-col w-full sm:w-[336px] gap-5 sm:gap-14">
           <h1 className="text-[30px] sm:text-[40px] text-[#212529] font-bold uppercase leading-[48px]">

@@ -849,24 +849,24 @@ export const FoundersData:TeamsMembersProps[] = [
     },
 ]
 
-export const CounterData:CounterProps[] = [
-    {
-        count: "4M+",
-        text: "Customers Served"
-    },
-    {
-        count: "1.2M+",
-        text: "Passenger trips completed"
-    },
-    {
-        count: "688",
-        text: "Vehicles signed up"
-    },
-    {
-        count: "16+",
-        text: "Cities covered"
-    },
-]
+export const CounterData: CounterProps[] = [
+  {
+    count: "4M+",
+    text: "Customers Served",
+  },
+  {
+    count: "900k",
+    text: "Kg of Co2 emissions saved",
+  },
+  {
+    count: "688",
+    text: "Vehicles signed up",
+  },
+  {
+    count: "16+",
+    text: "Cities covered",
+  },
+];
 
 export const ConferenceSolutionData: IProps[] = [
   {

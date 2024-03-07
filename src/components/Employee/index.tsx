@@ -12,6 +12,8 @@ import TechCommLogos from '@/components/common/techs';
 import BetterTogetherComponent from '@/components/Trips';
 import Link from 'next/link'
 import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
 
 const NeededInformations = [
   "What is the Impact of Using an Employee Shuttle Service?",
@@ -85,72 +87,22 @@ const EmployeeTransComponent = () => {
         <Image
           src="/blue-blur-rect.png"
           fill
-          sizes="100vw"
+          sizes="100vw, 100vh"
           priority
           className="absolute object-fill"
           alt="rect"
         />
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Employee transportation service for business
-            </h1>
-            <p className="text-lg sm:text-xl w-[630px]">
-              We understand that every business is different – so with our
+      <GetAQuote />
+      <UserRoutesComponent
+       title="Employee transportation service for business"
+       desc="We understand that every business is different – so with our
               employee shuttle service, you can order one small car or a whole
               fleet of vehicles. We can’t guarantee a synchronized driving
               display on arrival, but we can guarantee punctuality,
-              traceability, timeliness, and cool tunes if that’s your thing.
-            </p>
+              traceability, timeliness, and cool tunes if that’s your thing."
+      />
 
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[404px] sm:h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus route"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:mt-[116px] py-4">
         <MiniStickyBarMenu data={NeededInformations} />
         <div id="info-1" className="hidden h-20"></div>
@@ -247,7 +199,7 @@ const EmployeeTransComponent = () => {
             </p>
             <Button
               variant={"default"}
-              className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px]"
+              className="mt-6 w-fit sm:w-[159px] sm:h-[64px] sm:mt-10 sm:mb-[48px] h-[64px]"
               //onClick={() => {}}
             >
               Get in touch
@@ -326,6 +278,7 @@ const EmployeeTransComponent = () => {
               src="/employee-1.png"
               alt="employee"
               fill
+              sizes="100vw, 100vh"
               priority
               className="object-cover absolute"
             />

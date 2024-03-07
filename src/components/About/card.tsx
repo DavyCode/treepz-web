@@ -13,10 +13,10 @@ interface TeamCardProps {
 
 const TeamCard:React.FC<TeamCardProps> = ({src, name, title, rank, social }) => {
   return (
-    <div className="w-[165px] sm:w-[286px] rounded-2xl genShadow  max-h-[228px] sm:max-h-[320px] relative p-2 sm:p-4">
+    <div className="w-[165px] sm:w-[286.67px] rounded-2xl genShadow h-[228px] sm:h-[320px] relative p-2 sm:p-4">
         <Image src={`/teams/${src}`} alt={src} width={263} height={226} sizes='100vw' priority className="object-contain" />
         <div className="flex gap-2 items-center">
-            <h1 className="text-[#212529] text-sm sm:text-base font-semibold">{name}</h1>
+            <h1 className="text-[#212529] text-sm sm:text-base font-semibold mt-[6px]">{name}</h1>
             <Link href={social}>
               <LinkedinIcon />
             </Link>

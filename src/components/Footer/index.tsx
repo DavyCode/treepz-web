@@ -15,7 +15,8 @@ const Footer = () => {
   return (
     <div className={clsx({
       "w-full pt-[88px] mt-10": true,
-      "bg-[#F7F7F7]": ['/employee-transportation'].includes(pathname)
+      "bg-[#F7F7F7]": ['/employee-transportation', '/contact'].includes(pathname),
+      "mt-[206px]": ['/contact'].includes(pathname)
     })}>
     <div className="container px-4 sm:px-20">
       <div className="flex flex-col sm:flex-row mx-auto w-full justify-between border-b border-gray-100 sm:pb-[88px]">
@@ -37,13 +38,10 @@ const Footer = () => {
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">Solutions</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
               {solutionsLists.map(({ label, href }, index) => (
-                <Link
-                  href={`/${href}`}
-                  key={index}
-                  className="transition duration-300 ease-in-out hover:underline my-1"
-                >
-                  {label}
-                </Link>
+                <Link href={`/${href}`}  key={index} className="relative inline-block transition-colors duration-700 group w-fit">
+                      {label}
+                      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#4D5154] transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100"></span>
+                  </Link>
               ))}
             </div>
           </div>
@@ -52,20 +50,22 @@ const Footer = () => {
               GROUP TRANSPORTATION SERVICES
             </h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
-              {groupLists.map((link, index) => (
-                <Link href={`/${link}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
-                  {link}
-                </Link>
+              {groupLists.map((item, index) => (
+                <Link href={`/${item}`}  key={index} className="relative inline-block transition-colors duration-700 group w-fit">
+                      {item}
+                      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#4D5154] transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100"></span>
+                  </Link>
               ))}
             </div>
           </div>
           <div className="w-[159px]">
             <h1 className="text-xs text-[#6F7174] uppercase mb-6">company</h1>
             <div className="flex flex-col gap-1 text-sm text-[#4D5154]">
-              {companyLists.map((link, index) => (
-                <Link href={`/${link.href}`} key={index} className="transition duration-300 ease-in-out hover:underline my-1">
-                  {link.label}
-                </Link>
+              {companyLists.map(({href, label}, index) => (
+                <Link href={`/${href}`}  key={index} className="relative inline-block transition-colors duration-700 group w-fit">
+                      {label}
+                      <span className="absolute bottom-0 left-0 w-full h-[1px] bg-[#4D5154] transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100"></span>
+                  </Link>
               ))}
             </div>
           </div>
