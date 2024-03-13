@@ -13,6 +13,7 @@ import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '../common/MiniStickyBarMenu';
 import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '../common/user-routes';
 
 const NeededInformations = ["Corporate Shuttle Service", "Which Swoop corporate shuttle service should I choose?", "How much does a corporate shuttle program cost?", "Is Treepz carbon neutral?", "What type of amenities do Swoop vehicles offer?", "How many vehicles can I reserve for the corporate shuttle service?", "Is there a Swoop corporate shuttle service near me?"];
 

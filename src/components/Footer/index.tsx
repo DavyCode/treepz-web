@@ -14,7 +14,7 @@ const Footer = () => {
 
   return (
     <div className={clsx({
-      "w-full pt-[88px] mt-10": true,
+      "w-full pt-[88px] mt-10 bg-#F7F7F7": true,
       "bg-[#F7F7F7]": ['/employee-transportation', '/contact'].includes(pathname),
       "mt-[206px]": ['/contact'].includes(pathname)
     })}>

@@ -15,7 +15,8 @@ import TechCommLogos from "@/components/common/techs";
 import BetterTogetherComponent from "@/components/Trips";
 import PopularCitiesCarousel from "@/components/common/PopularCitiesCarousel";
 import Link from 'next/link'
-import GetAQuote from '@/components/common/get-a-qoute'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from "../common/user-routes";
 
 const NeededInformations = [
   "Discrete, Reliable, and Punctual",

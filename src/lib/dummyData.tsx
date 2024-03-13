@@ -375,39 +375,39 @@ export const socialMediaLists: SocialProps[] = [
 export const EventUniqueData: IProps[] = [
   {
     icon: <DoorToDoorIcon />,
-    title: "Feel-good rides",
+    title: "Rides you enjoy",
     description:
-      "A great event starts with an enjoyable journey. Rest assured that our vehicles are thoroughly checked and insured, can be GPS-tracked, and your drivers are screened, qualified, and experienced",
+      " Experience peace of mind knowing every Treepz vehicle is rigorously inspected, fully insured, and equipped with GPS tracking. Our drivers are hand-picked, qualified professionals dedicated to making your journey comfortable and stress-free.",
   },
   {
     icon: <RealSustainIcon />,
     title: "Real sustainability",
     description:
-      "We believe in sustainability that really means something; we utilize existing vehicles so that we don’t add extra cars to the road. Also, we offset our carbon to tackle deforestation and create sustainable jobs",
+      "We're not just saying sustainable, we're doing it. By utilizing existing vehicles and offsetting our carbon footprint, we reduce emissions and support projects that plant trees and create eco-jobs.",
   },
   {
     icon: <GoingFurtherIcon />,
-    title: "Going further? On it!",
+    title: "We go further",
     description:
-      "Our service extends beyond our borders. For complete peace of mind, you can book a vehicle from our network of carefully screened Treepz drivers, based all over the world",
+      "The world is your oyster, and Treepz gets you there. Wherever your travels take you, experience seamless journeys with our network of carefully vetted drivers in destinations around Africa.",
   },
   {
     icon: <WalletFriendlyIcon />,
     title: "Budget-sized fees",
     description:
-      "It may sound obvious, but in our opinion, you should only be charged for what you need. With Treepz, you can tailor your journey to fit your budget – no compromises, no surprises",
+      "Treepz believes in transparent pricing. Customize your ride to your budget, see the final cost instantly, and relax knowing there are no hidden fees.",
   },
   {
     icon: <CheckableEasyIcon />,
     title: "Visible, checkable, and easy payable",
     description:
-      "Things don't need to be complicated. You can see all the information about your journey then review, approve, and pay easily",
+      "Planning your trip is smooth sailing with Treepz! See all your travel details upfront, review everything at your own pace, and confirm and pay with ease. It's that simple.",
   },
   {
     icon: <SuppotLocalBuzIcon />,
     title: "Become a Treepz local business champion",
     description:
-      "Because we have a network of carefully picked drivers who are already based in your chosen area, we can always support great local business owners",
+      "By choosing Treepz, you're not just getting a ride, you're supporting your community! Our network of local drivers keeps your travel money circulating close to home, empowering local businesses and strengthening your neighborhood.",
   },
 ];
 
@@ -569,39 +569,39 @@ export const UniversityUniqueData: IProps[] = [
 export const ConventionUniqueData: IProps[] = [
   {
     icon: <SlickRides />,
-    title: "Slick rides",
+    title: "Peaceful rides",
     description:
-      "Enjoy smooth, professional rides with our meticulously checked and insured vehicles, plus GPS-trackable journeys, and vetted, trained, and experienced drivers",
+      "Treepz ensures your ride is smooth, safe, and comfortable with meticulously maintained, insured vehicles and GPS-tracked journeys. Plus, our drivers are rigorously vetted, trained, and experienced, so you can focus on what matters most.",
   },
   {
     icon: <EasyToBeGreen />,
-    title: "Easy to be green",
+    title: "Eco-friendly",
     description:
-      "We use existing group vehicles rather than adding new cars to the road, and we offset carbon by funding projects that prevent deforestation and create sustainable jobs",
+      "Your ride creates positive change. We utilize existing vehicles to minimize environmental impact and support local communities through our deforestation prevention projects.",
   },
   {
     icon: <AllAroundTheWorld />,
-    title: "All around the world",
+    title: "For Africa",
     description:
-      "If you have events that require travel overseas, we will help you with that too. Our network of vetted drivers is global, which sounds rather fancy but just makes sense to us",
+      "Treepz makes event transportation across Africa seamless. Our trusted network of local, vetted drivers ensures you and your guests arrive safely and comfortably, ready to create unforgettable memories.",
   },
   {
     icon: <WalletFriendlyIcon />,
-    title: "Flexible billing",
+    title: "Tailored pricing",
     description:
-      "Call us radical, but we believe you should only pay for what you actually need. Tweak your requirements and adjust your costs according to your company’s budget.",
+      "No surprises, just transparency. Pay only for what you need, customize your ride to fit your budget.",
   },
   {
     icon: <ApproveReview />,
-    title: "Approve, review, and pay",
+    title: "Streamlined checkout",
     description:
-      "See all the information you need about your service before you pay, so you’ll never be left in the dark",
+      "See all the details upfront before you book. No hidden fees, no surprises, just complete transparency so you can make informed choices and book with confidence.",
   },
   {
     icon: <SuppotLocalBuzIcon />,
-    title: "Support local business",
+    title: "Community-driven",
     description:
-      "Be a fellow champion for smaller businesses by riding with our select vetted and checked pool of local drivers",
+      "Every ride empowers local businesses, fuels the heart of your neighborhood, and offers personalized journeys just for you.",
   },
 ];
 

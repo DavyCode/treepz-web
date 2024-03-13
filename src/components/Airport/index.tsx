@@ -14,6 +14,7 @@ import Link from 'next/link'
 import GetAQuote from '@/components/common/get-a-quote'
 import UserRoutesComponent from '@/components/common/user-routes'
 import { useModal } from "@/contexts/ModalContext";
+import { useRouter } from 'next/navigation'
 
 const NeededInformations = [
   "Why Use a Corporate Travel Service?",

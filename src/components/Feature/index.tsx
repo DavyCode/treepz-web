@@ -52,7 +52,7 @@ const FeaturesComponent = () => {
           transportation needs.
         </p>
       </div>
-      <div className="flex flex-col sm:flex-row w-full mt-10 gap-4 sm:flex-wrap">
+      <div className="flex flex-col sm:grid sm:grid-cols-3 w-full mt-10 gap-4 sm:flex-wrap">
         {PostalCardData.map((item: any, index: number) => (
           <PostalCard
             src={item.src}

@@ -49,7 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={myFont.className}>
-        <div className="flex flex-col">
+        <div className="flex flex-col !bg-white">
           <ModalProvider>
             <NavBar />
             {children}

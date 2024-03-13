@@ -15,7 +15,7 @@ import { NewPartnerLogos } from "./data";
 const AboutComponent = () => {
     return (
       <>
-        <div className="bg-gradient-to-t to-[#FDF2D052] from-[#FDF2D000] bg-no-repeat sm:h-[704px] sm:mt-20 flex flex-col sm:flex-row">
+        <div className="bg-gradient-to-t to-[#FDF2D052] from-[#FDF2D000]  via-[#ffffff] bg-no-repeat sm:h-[704px] sm:mt-20 flex flex-col sm:flex-row">
           <div className="w-full sm:w-[776px] px-4 sm:pl-20 my-10 sm:my-[85px] flex justify-center flex-col">
             <div className="bg-[#FDF2D0] flex items-center gap-2 w-[155px] h-10 text-xl rounded-full mx-auto sm:mx-0 mb-[12px] uppercase text-[#A57F0C] py-2 px-3">
               our mission
