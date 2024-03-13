@@ -118,3 +118,65 @@ export const OurPartnersData: IProps[] = [
     src: "cu-logo.png"
   },
 ];
+
+export const StaticPartnersData: IProps[] = [
+  {
+    src: "liberty.png"
+  },
+  {
+    src: "logo-17.png"
+  },
+  {
+    src: "logo-16.png"
+  },
+  {
+    src: "logo-15.png"
+  },
+  {
+    src: "logo-14.png"
+  },
+  {
+    src: "logo-13.png"
+  },
+  {
+    src: "logo-12.png"
+  },
+  {
+    src: "logo-11.png"
+  },
+  {
+    src: "cu-logo.png"
+  },
+  {
+    src: "logo-24.png"
+  },
+];
+export const StaticPartnersDataForCon: IProps[] = [
+  {
+    src: "logo-18.png",
+  },
+  {
+    src: "con-1.png",
+  },
+  {
+    src: "con-2.png",
+  },
+  {
+    src: "con-3.png",
+  },
+  {
+    src: "con-4.png",
+  },
+  {
+    src: "con-5.png",
+  },
+  {
+    src: "con-6.png",
+  },
+  {
+    src: "logo-9.png",
+  },
+  {
+    src: "con-7.png",
+  },
+];

@@ -11,30 +11,30 @@ import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import Link from 'next/link'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
+import { useModal } from '@/contexts/ModalContext';
 
 const NeededInformations = ["Why Use a Corporate Travel Service?", "More than A to B", "Supporting Your Fellow Business Owners", "A Deeper Dive into Swoop for Business"];
 
 const HealthTranspComponent = () => {
+    const { showModal } = useModal();
+
   return (
     <div>
-      <div className="bg-[url(/non-eme-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px]">
+      <div className="bg-[url(/health-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px] mt-10 sm:mt-20">
         <div className="w-full sm:w-[920px] mx-auto text-white py-[80px] sm:pt-[199px] px-4">
           <h1 className="font-bold text-[28px] sm:text-[54px] leading-[32px] sm:leading-[56px] mb-[28px] uppercase text-center">
-            the best in ground transportation
+            The Best in healthcare Transportation
           </h1>
           <p className="text-base sm:text-lg text-center w-full sm:w-[614px] mx-auto">
-            We are transportation service experts across executive company
-            events, executive transfers, special occasions, and team off-sites.
-            Easily search and book sprinter vans, coaches, and charter buses
-            with a professional driver.
+           More than a ride, it&lsquo;s a healing journey. Experience compassionate medical transportation with Treepz.
           </p>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold w-full sm:w-fit sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
-            //onClick={() => {}}
+            className="cursor-pointer rounded-full w-fit sm:w-[152px] sm:mx-auto mt-8 sm:mt-14 text-black flex items-center gap-2"
           >
             Learn more
-            <ChevronRightIcon />
           </Button>
         </div>
       </div>
@@ -53,12 +53,10 @@ const HealthTranspComponent = () => {
       </div>
       <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
         <h1 className="w-full sm:w-[735px] mx-auto font-bold text-[20px] sm:text-[28px] leading-[32px] uppercase text-[#212529] mb-6 text-center">
-          transporting your team, stress-free and cool as cucumbers
+          Let our dedicated team handle the transportation so you can focus on getting better.
         </h1>
         <p className="text-xl text-[#4D5154] text-center w-full sm:w-[1022px] mx-auto">
-          By all means, your business could cope without the use of corporate
-          travel services but in our opinion, when it comes to running your
-          business smoothly and profitably, there are too many reasons not to.
+          Beyond just rides, Treepz optimizes patient journeys, saving valuable time and resources for both patients and healthcare providers.
         </p>
       </div>
       {/* unique */}
@@ -72,65 +70,11 @@ const HealthTranspComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col w-full sm:w-[648px]">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Swoop for Business
-            </h1>
-            <p className="text-lg sm:text-xl">
-              Vehicles provided by specialized travel management companies or
+      <GetAQuote />
+      <UserRoutesComponent title="Swoop for Business" desc="Vehicles provided by specialized travel management companies or
               TMCs like Swoop (hey there) will help your business effectively
               manage your travel-related activities – from events and
-              conferences to those stressful daily commutes.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full sm:w-[1022px] h-[400px] sm:h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              priority
-              className="absolute object-contain"
-            />
-          </div>
-        </div>
-      </div>
+              conferences to those stressful daily commutes." />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
@@ -148,10 +92,10 @@ const HealthTranspComponent = () => {
           ))}
         </div>
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info-1">
-          <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
+         {/*  <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
             Why Use a Corporate Travel Service?
-          </h1>
-          <div className="space-y-6 text-[#6F7174] text-lg border-b pb-11">
+          </h1> */}
+          {/* <div className="space-y-6 text-[#6F7174] text-lg border-b pb-11">
             <p>
               By all means, your business could cope without the use of
               corporate travel services but in our opinion, when it comes to
@@ -172,7 +116,7 @@ const HealthTranspComponent = () => {
               provide assistance with corporate event planning, group travel,
               and employee relocation. Sound good? Step this way…
             </p>
-          </div>
+          </div> */}
 
           <div className="w-full sm:h-[328px] relative overflow-hidden rounded-2xl">
             <Image
@@ -183,49 +127,13 @@ const HealthTranspComponent = () => {
               className="object-contain absolute"
             />
           </div>
+          <div className="mt-12 border-t border-[#DEE0E3]"></div>
 
           <div className="flex flex-col space-y-6 mt-12" id="info-2">
-            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-              More than A to B
-            </h1>
-            <p className="text-[#6F7174] text-lg">
-              Swoop was born out of a desire to improve on what’s come before –
-              to create the next generation of on-demand transportation using
-              the best quality drivers and vehicles, specially engineered
-              technology, and friendly experts who will support you every mile
-              of your journey.
-            </p>
-            <p className="text-[#6F7174] text-lg">
-              Swoop’s business travel options offer tons of benefits to your
-              business – more than giving your employees a ride from one place
-              to another. We help you with hugely vital considerations like cost
-              savings, efficient travel planning, compliance with your travel
-              policies, and way happier employees.
-            </p>
-            <p className="text-[#6F7174] text-lg">
-              Not only that, we let you focus on your core operations so you can
-              leave the complex travel management tasks to us, the experts!
-            </p>
-            <h2 className="font-semibold text-xl sm:text-2xl">
-              Your Benefits at a Glance
-            </h2>
-            <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
-              <li>Budget-friendly</li>
-              <li>Corporate account options</li>
-              <li>Company policy-friendly</li>
-              <li>Clear, dependable invoicing</li>
-              <li>Super-easy approval and payment</li>
-              <li>Global coverage for all you jet setters</li>
-              <li>Flawless track record with all your favorite brands</li>
-              <li>Professional, background-checked drivers</li>
-              <li>Sustainable cars, green credentials galore</li>
-              <li>
-                A dedicated team of lovely, experienced travel coordinators
-              </li>
-              <Button
+            <Button
                 variant={"default"}
-                className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-                //onClick={() => {}}
+                className="cursor-pointer rounded-full text-gray-900 w-fit sm:w-[156px] flex items-center gap-2 sm:!h-[64px] mb-12"
+                onClick={showModal}
               >
                 Get a quote
               </Button>
@@ -234,11 +142,11 @@ const HealthTranspComponent = () => {
                   src="/executive-bg.png"
                   alt="detail"
                   fill
+                  sizes="100vw, 100vh"
                   priority
                   className="object-cover absolute"
                 />
               </div>
-            </div>
             <div>
               <div className="border-b pb-11" id="info-3">
                 <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
@@ -335,7 +243,7 @@ const HealthTranspComponent = () => {
 
             <Button
               variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px]"
+              className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-fit sm:mt-10 sm:mb-[48px] sm:h-[64px]"
               //onClick={() => {}}
             >
               Change your travel plans

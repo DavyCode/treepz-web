@@ -102,13 +102,13 @@ const BusinessSolutionComponent = () => {
               </p>
               <Button
                 variant={"default"}
-                className="relative overflow-hidden sm:w-[194px] mx-auto sm:h-[64px] group"
+                className="relative overflow-hidden sm:w-[194px] mx-auto h-[40px] group justify-center items-center"
                 onClick={showModal}
               >
-                <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-full">
+                <span className="absolute top-0 left-0 w-full h-[20px] flex items-center justify-center transition-transform duration-700 ease-in-out group-hover:-translate-y-full bg-red-400 ">
                   Contact Us
                 </span>
-                <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-full group-hover:translate-y-0">
+                <span className="absolute top-0 left-0 w-full h-[20px] flex items-center justify-center transition-transform duration-700 ease-in-out transform translate-y-[40px] group-hover:translate-y-0">
                   Contact Us
                 </span>
               </Button>
@@ -343,34 +343,41 @@ const BusinessSolutionComponent = () => {
             </div>
           </div>
           <div className="sm:mt-[205px] w-full sm:max-w-[816px] mx-auto sm:h-[252px] h-fit justify-center items-center flex flex-col">
-            <h1 className="text-2xl sm:text-[32px] leading-[40px] text-[#212529] mb-6 font-bold">In short</h1>
-            <p className="text-[#4D5154] text-lg sm:text-xl sm:mb-10">While self-booking has its advantages in terms of cost control and independence, high-quality private transportation providers like Treepz offer a more comprehensive and hassle-free solution with experienced drivers, flexible options, and peace of mind.</p>
+            <h1 className="text-2xl sm:text-[32px] leading-[40px] text-[#212529] mb-6 font-bold">
+              In short
+            </h1>
+            <p className="text-[#4D5154] text-lg sm:text-xl sm:mb-10">
+              While self-booking has its advantages in terms of cost control and
+              independence, high-quality private transportation providers like
+              Treepz offer a more comprehensive and hassle-free solution with
+              experienced drivers, flexible options, and peace of mind.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              variant={"default"}
-              className="relative overflow-hidden sm:w-[249px] sm:h-[64px] text-center items-center sm:px-[17px] group"
-              onClick={() => router.push("/business-solutions")}
-            >
-              <p className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                Explore our group solutions
-              </p>
-              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
-                Explore our group solutions
-              </span>
-            </Button>
-            <Button
-              variant={"outline"}
-              className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
-              onClick={showModal}
-            >
-              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
-                For Personal Use
-              </span>
-              <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
-                For Personal Use
-              </span>
-            </Button>
-          </div>
+              <Button
+                variant={"default"}
+                className="relative overflow-hidden sm:w-[249px] sm:h-[64px] text-center items-center sm:px-[17px] group"
+                onClick={() => router.push("/business-solutions")}
+              >
+                <p className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                  Explore our group solutions
+                </p>
+                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                  Explore our group solutions
+                </span>
+              </Button>
+              <Button
+                variant={"outline"}
+                className="relative sm:w-[156px] sm:h-[64px] group overflow-hidden"
+                onClick={showModal}
+              >
+                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center group-hover:transform group-hover:-translate-y-full">
+                  For Personal Use
+                </span>
+                <span className="transition-transform duration-700 ease-in-out absolute top-0 left-0 w-full h-full flex items-center justify-center transform translate-y-full group-hover:translate-y-0">
+                  For Personal Use
+                </span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

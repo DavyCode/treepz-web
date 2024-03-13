@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import OurPartners from '../Hero/partners';
-import { OurPartnersData } from '../Hero/data';
+import { StaticPartnersDataForCon } from "../Hero/data";
 import Postal from '../common/card';
 import { ConventionUniqueData, AccordionData } from '@/lib/dummyData';
 import TimerIcon from '@/assets/svgs/timer.svg'
@@ -13,21 +13,26 @@ import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
 import MiniStickyBarMenu from '@/components/common/MiniStickyBarMenu'
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
+import { useModal } from '@/contexts/ModalContext';
+import StaticPartners from '../common/static-partners';
+
 
 const NeededInformations = ["How Treepz Will Take Your Worries Away", "Treepz has the know-how", "Our conference shuttle services", "Tailor-made solutions", "Time and cost savings","Safety", "Choose your own vehicle","Carbon neutral","Options for convention shuttles","How much does it cost for convention transportation near me?", "Book EASY Convention Transporation"];
 
 const ConventionComponent = () => {
+   const { showModal } = useModal();
   return (
     <div>
       <div className="bg-[url(/Hero-convention.png)] bg-cover bg-no-repeat w-full h-[519px] sm:h-[708px] sm:mt-20">
-        <div className="w-full sm:w-[702px] mx-auto text-white pt-[60px] sm:pt-[100px] px-4">
+        <div className="w-full sm:w-[914px] mx-auto text-white pt-[60px] sm:pt-[184px] px-4">
           <h1 className="font-bold text-[38px] sm:text-[56px] sm:leading-[64px] mb-[28px] uppercase text-center">
-            CONVENTION Transportation
+            Treepz CONVENTION Transportation
           </h1>
           <p className="text-base sm:text-xl text-center">
-            If you’re here because you have been handed the task of organizing
-            your next convention shuttle service, we have dozens of options and
-            amenities for you to choose from.
+            We don&lsquo;t just have cars, we have smooth-running machines that
+            gets everyone where they need to be, on time and happy.
           </p>
           <div className="flex w-full justify-center">
             <Button
@@ -45,24 +50,22 @@ const ConventionComponent = () => {
           Trusted by Your Favorite Businesses
         </p>
         <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-row justify-between items-center">
-          {OurPartnersData.map(({ src }: any) => (
-            <OurPartners src={src} key={src} />
+          {StaticPartnersDataForCon.map(({ src }: any) => (
+            <StaticPartners src={src} key={src} />
           ))}
         </div>
       </div>
-      <div className="w-full sm:max-w-[1022px] mx-auto mb-10 sm:mb-[88px] px-4">
-        <h1 className="w-full sm:w-[551px] mx-auto font-bold text-[28px] sm:text-[32px] leading-[40px] uppercase text-[#212529] mb-6 text-center sm:text-left">
-          First of all, it&lsquo;s going to be OK…
+      <div className="w-full sm:max-w-[1191px] space-y-6 mx-auto mb-10 sm:mb-[88px]">
+        <h1 className="w-full mx-auto font-bold text-[28px] sm:text-[32px] leading-[40px] uppercase text-[#212529] mb-6 text-center">
+          Conventions are stressful enough. Let Treepz handle the logistics.
         </h1>
-        <p className="text-xl text-[#4D5154] text-center">
-          And second of all, if it&lsquo;s a convention shuttle service you
-          need, you are in the right place. Your event is more than just a quick
-          transaction to us - we make it our business to keep your business
-          running smoothly.
+        <p className="text-xl text-[#4D5154] text-center mt-8">
+          We go above and beyond to ensure your attendees arrive on time,
+          relaxed, and ready to enjoy your event.
         </p>
       </div>
       {/* unique */}
-      <div className="container px-4 sm:px-20 flex flex-col sm:flex-row gap-4 sm:flex-wrap">
+      <div className="container px-4 sm:px-20 flex  sm:grid sm:grid-cols-3 flex-col gap-4 sm:flex-wrap sm:mb-[86px]">
         {ConventionUniqueData.map(({ icon, title, description }) => (
           <Postal
             icon={icon}
@@ -72,93 +75,30 @@ const ConventionComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Dive Deeper into Treepz&lsquo;s Event Transportation Services
-            </h1>
-            <p className="text-lg sm:text-xl">
-              Our services are trusted by many. Experience the unique Treepz
-              touch that elevates us in the industry.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              priority
-              className="absolute object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <GetAQuote />
+      <UserRoutesComponent
+        title="Convention Transportation with Treepz"
+        desc="Your ride, your style. Choose from hundreds of vehicles, dozens of designs, and endless amenity options to create your perfect travel experience."
+      />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <MiniStickyBarMenu data={NeededInformations} />
 
         <div className="w-full sm:w-[853px] mt-10 sm:mt-0" id="info-1">
           <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px] mb-6">
-            How Treepz Will Take Your Worries Away
+            Book Treepz and Relax
           </h1>
           <div className="space-y-6 text-[#6F7174] text-lg">
             <p>
-              Treepz specializes in large events that are notoriously complex.
-              We understand that you are looking for a reputable company that
-              can take the strain away from you and take your delegates, guests,
-              and teammates to a conference or convention.
-            </p>
-
-            <p>
-              Unlike other conference shuttle providers who can come out more
-              expensive because of a distinct lack of transport options, Treepz
-              has a whole fleet of vehicles – clean, green, safe, and ready to
-              go.
-            </p>
-
-            <p>
-              Booking with us will save you money, reduce congestion and parking
-              concerns, as well as getting a five-star streamlined service!
+              Treepz specializes in managing the complexities of large-scale
+              events. We understand your need for a reliable partner to
+              seamlessly transport your delegates, guests, or teammates to
+              conferences or conventions. Our expertise ensures a smooth,
+              stress-free experience for everyone involved.
             </p>
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
+            className="cursor-pointer rounded-full text-gray-900 flex items-center gap-2 mt-6 w-full sm:w-fit sm:mt-10 sm:mb-[48px]"
             //onClick={() => {}}
           >
             Get a quote
@@ -168,6 +108,7 @@ const ConventionComponent = () => {
               src="/detail-img.png"
               alt="detail"
               fill
+              sizes="100vw, 1000vh"
               priority
               className="object-contain absolute"
             />
@@ -175,21 +116,29 @@ const ConventionComponent = () => {
 
           <div className="flex flex-col space-y-6 mt-12" id="info-2">
             <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
-              Treepz has the know-how
+              We are experts in the game
             </h1>
             <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <p>
-                Once we know the details of your event, we will select a team of
-                professional drivers who are familiar with the location where
-                the event is taking place – a bunch of amazing drivers who can
-                handle multi-day logistics and all different trip types.
+                Leave the transportation logistics to us! Our meticulous
+                planning starts with selecting local, professional drivers
+                familiar with your event venue. These experts can handle complex
+                multi-day itineraries and diverse trip types with ease.
+                Additionally, dedicated onsite coordinators become an extension
+                of your team, ensuring seamless transportation and the perfect
+                vehicle selection for your convention.
               </p>
-              ‍
+            </div>
+            <h1 className="font-semibold text-xl sm:text-[28px] sm:leading-[36px]">
+              Our conference shuttle services
+            </h1>
+            <div className="space-y-6 text-[#6F7174] text-lg  pb-12 border-b">
               <p>
-                Not only that, but we also deploy onsite coordinators on the
-                ground who will be an extension of your team. Our experienced
-                team will help yours to make the perfect vehicle selection for
-                your convention.
+                Treepz is your trusted partner for large-scale event
+                transportation. Our years of experience and proven track record
+                ensure your attendees arrive on time, relaxed, and ready to
+                participate. Let us handle the logistics so you can focus on the
+                event&lsquo;s success.
               </p>
             </div>
           </div>
@@ -243,7 +192,7 @@ const ConventionComponent = () => {
           </div>
           <Button
             variant={"default"}
-            className="cursor-pointer rounded-full w-full sm:w-[260px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
+            className="cursor-pointer rounded-full w-full sm:w-[260px] font-medium mt-8 sm:mt-6 text-black flex gap-2"
             //onClick={() => {}}
           >
             Get the there with Treepz
@@ -279,7 +228,7 @@ const ConventionComponent = () => {
           <Button
             variant={"default"}
             className="cursor-pointer rounded-full w-full sm:w-[216px] font-semibold mt-8 sm:mt-6 text-black flex gap-2"
-            //onClick={() => {}}
+            onClick={showModal}
           >
             Get a custom quote
             <ChevronRightIcon />

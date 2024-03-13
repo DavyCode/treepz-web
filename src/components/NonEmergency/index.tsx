@@ -6,18 +6,20 @@ import Link from 'next/link';
 import OurPartners from '../Hero/partners';
 import Postal from '../common/card';
 import { NonEmeTranspUniqueData, AccordionData, MiniPartnerData } from '@/lib/dummyData';
-import TimerIcon from '@/assets/svgs/timer.svg'
 import ChevronRightIcon from '@/assets/svgs/chervon-right-nav.svg'
 import TechCommLogos from '@/components/common/techs'
 import BetterTogetherComponent from '@/components/Trips';
 import PopularCitiesCarousel from '@/components/common/PopularCitiesCarousel';
+import GetAQuote from '@/components/common/get-a-quote'
+import UserRoutesComponent from '@/components/common/user-routes'
+
 
 const NeededInformations = ["Non-Emergency Medical Transportation", "Caring Transportation When You Need it Most", "Get There Safely with Treepz", "Drill Down to the Detail", "So, What Are the Options?","It’s a Win-Win for Your Business"];
 
 const NonEmergencyTranspComponent = () => {
   return (
     <div>
-      <div className="bg-[url(/non-eme-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px]">
+      <div className="bg-[url(/non-eme-hero.png)] bg-cover bg-no-repeat w-full h-fit sm:h-[707px] mt-10 sm:mt-20">
         <div className="w-full sm:w-[920px] mx-auto text-white py-[80px] sm:pt-[199px] px-4">
           <h1 className="font-bold text-[28px] sm:text-[54px] leading-[32px] sm:leading-[56px] mb-[28px] uppercase text-center">
             Non-Emergency Medical Transportation
@@ -70,63 +72,12 @@ const NonEmergencyTranspComponent = () => {
           />
         ))}
       </div>
-      <div className="bg-black">
-        <div className="container px-4 sm:px-20 py-[50px] text-white flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-[28px] sm:text-[40px] font-medium leading-[48px] text-white">
-            Get a Free Quote Right Away
-          </h1>
-          <div className="flex w-full sm:w-[355px] justify-between items-center mt-4">
-            <div className="flex gap-8 w-full">
-              <div>
-                <TimerIcon />
-              </div>
-              <div className="flex flex-col w-full sm:w-[111px] text-sm">
-                It takes less than
-                <span className="font-medium text-base">3 minutes</span>
-              </div>
-            </div>
-            <Button
-              variant={"default"}
-              className="cursor-pointer rounded-full font-semibold text-gray-900 flex items-center gap-2"
-              //onClick={() => {}}
-            >
-              Get a quote
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#FDF2D0] w-full">
-        <div className="container px-4 sm:px-20 flex justify-between flex-col sm:flex-row">
-          <div className="py-4 sm:py-[120px] flex flex-col w-full sm:w-[648px]">
-            <h1 className="text-2xl font-bold mb-2 sm:mb-6">
-              Non-Emergency Medical Transportation with Treepz
-            </h1>
-            <p className="text-lg sm:text-xl">
-              Choose from hundreds of vehicles, dozens of styles, and seemingly
-              endless choices when it comes to amenities.
-            </p>
-
-            <div className="w-[280px] h-[56px] mt-[20px] sm:mt-[89px] relative">
-              <Image
-                src="/google-rating.png"
-                alt="google rating"
-                fill
-                priority
-                className="absolute object-contain"
-              />
-            </div>
-          </div>
-          <div className="w-full sm:w-[1022px] h-[400px] sm:h-[670px] relative">
-            <Image
-              src="/bus-route.png"
-              alt="Bus routing"
-              fill
-              priority
-              className="absolute object-contain"
-            />
-          </div>
-        </div>
-      </div>
+      <GetAQuote />
+      <UserRoutesComponent 
+        title="Non-Emergency Medical Transportation with Treepz" 
+        desc="Choose from hundreds of vehicles, dozens of styles, and seemingly
+              endless choices when it comes to amenities." 
+      />
       <div className="container px-4 sm:px-20 flex flex-col sm:flex-row justify-between my-4 sm:my-20 py-4">
         <div className="flex flex-col w-full sm:w-[352px] h-fit shadow rounded-lg bg-white sticky top-16 sm:top-24">
           <h1 className="text-sm text-[#6F7174] uppercase border-b p-2 w-full text-center">
